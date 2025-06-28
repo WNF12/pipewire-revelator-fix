@@ -1,0 +1,39 @@
+  GNU nano 7.2                                                     verify.yml                                                               
+name: Verify PipeWire Flat Config
+
+on:
+  push:
+    branches: [ flat-main ]
+  pull_request:
+    branches: [ flat-main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: List PipeWire config files
+        run: |
+          echo "🎚️ PipeWire config files:"
+          ls -lh *.conf || echo "No *.conf files found"
+
+      - name: List WirePlumber Lua rule files
+        run: |
+          echo "📜 WirePlumber Lua rules:"
+          ls -lh *.lua || echo "No *.lua files found"
+
+      - name: Check for restore script
+        run: |
+          if [ -f restore-pipewire.sh ]; then
+            echo "✅ Found restore-pipewire.sh"
+            head -n 5 restore-pipewire.sh
+          else
+            echo "❌ restore-pipewire.sh not found!"
+            exit 1
+          fi
+
+
+
+
