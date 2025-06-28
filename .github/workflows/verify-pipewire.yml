@@ -1,0 +1,27 @@
+name: Verify PipeWire Config
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  check-shell-and-structure:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Check for restore script presence
+      run: test -f restore-pipewire.sh
+
+    - name: Validate shell syntax
+      run: bash -n restore-pipewire.sh
+
+    - name: List configs
+      run: |
+        echo "PipeWire config files:"
+        find final-working/pipewire -type f
+        echo "WirePlumber config files:"
+        find final-working/wireplumber -type f
