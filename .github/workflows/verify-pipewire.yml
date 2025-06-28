@@ -1,11 +1,10 @@
-  GNU nano 7.2                                                     verify.yml                                                               
 name: Verify PipeWire Flat Config
 
 on:
   push:
-    branches: [ flat-main ]
+    branches: [ main ]
   pull_request:
-    branches: [ flat-main ]
+    branches: [ main ]
 
 jobs:
   verify:
@@ -33,7 +32,6 @@ jobs:
             echo "❌ restore-pipewire.sh not found!"
             exit 1
           fi
-
 
 
 
