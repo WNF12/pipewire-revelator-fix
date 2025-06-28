@@ -1,5 +1,12 @@
 # PipeWire + WirePlumber Revelator Fix (Flat Version)
 
+![Version](https://img.shields.io/badge/version-v1.0.0-green.svg)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Ubuntu%2024.04-orange.svg)
+![Status](https://img.shields.io/badge/stability-stable-brightgreen)
+![CI](https://github.com/WNF12/pipewire-revelator-fix/actions/workflows/verify.yml/badge.svg?branch=main)
+
+
 > **Project Title:** `pipewire-revelator-fix`
 >
 > &#x20; &#x20;
@@ -17,7 +24,7 @@ This **flat-layout** repo provides a **stable, conflict-free configuration** for
 ## 🚀 Quick Start
 
 ```bash
-git clone -b flat-main https://github.com/WNF12/pipewire-revelator-fix.git
+git clone https://github.com/WNF12/pipewire-revelator-fix.git
 cd pipewire-revelator-fix
 bash restore-pipewire.sh
 ```
@@ -104,3 +111,6 @@ MIT License — use freely with attribution.
 
 > Questions? Open an issue or create a PR to contribute.
 
+## 🤝 Contributing
+
+Pull requests are welcome! If you'd like to add support for additional USB mics, simplify routing, or improve compatibility, open an issue first to discuss the plan.
