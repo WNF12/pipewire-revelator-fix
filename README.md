@@ -78,6 +78,12 @@ These files are directly placed in the root of the repo for easier access:
 - 🧰 Config split into override modules
 - 🔁 Working restore and reset logic
 
+### v1.0.1 (2025-06-27)
+
+- 📦 Converted to flat layout for GitHub CI compatibility
+- 🔧 Adjusted restore logic to avoid systemd race conditions
+- 🛠️ Automated verification script for GitHub Actions CI
+- 🏷️ Tagged release v1.0.1
 ---
 
 ## 👩‍💻 Developer Notes
